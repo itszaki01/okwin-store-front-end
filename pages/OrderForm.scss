@@ -1,0 +1,18 @@
+.order-form {
+    input {
+        &:active {
+            border-color: var(--main-theme-color);
+        }
+        &:focus {
+            border-color: var(--main-theme-color);
+        }
+    }
+    select {
+        &:active {
+            border-color: var(--main-theme-color);
+        }
+        &:focus {
+            border-color: var(--main-theme-color);
+        }
+    }
+}

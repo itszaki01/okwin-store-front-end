@@ -1,0 +1,14 @@
+.product-description {
+    position: relative;
+    img {
+        max-width: 100% !important;
+        height: auto;
+    }
+}
+
+.product-page-grid {
+    .mantine-Grid-inner {
+        width: fit-content !important;
+        margin: 0 !important;
+    }
+}

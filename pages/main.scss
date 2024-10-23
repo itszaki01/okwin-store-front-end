@@ -1,0 +1,60 @@
+// styles.scss or any SCSS file you are using
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Changa:wght@200..800&family=Noto+Kufi+Arabic:wght@100..900&family=Readex+Pro:wght@160..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+// Your other styles can follow
+
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    direction: rtl;
+}
+:root {
+    --main-theme-color: #fff;
+}
+
+.phone-call-animation {
+    animation: animate-phone-call 2s linear infinite;
+
+    @keyframes animate-phone-call {
+        0% {
+            rotate: 13deg;
+        }
+        25% {
+            rotate: -13deg;
+        }
+        50% {
+            rotate: 13deg;
+        }
+        75% {
+            rotate: -13deg;
+        }
+        100% {
+            rotate: 13deg;
+        }
+    }
+}
+
+.btn-animation {
+    animation: animate-btn 1.5s linear infinite;
+
+    @keyframes animate-btn {
+        0% {
+            transform: translateX(-10px);
+        }
+        25% {
+            transform: translateX(10px);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+        75% {
+            transform: translateX(10px);
+        }
+        100% {
+            transform: translateX(-10px);
+        }
+    }
+}

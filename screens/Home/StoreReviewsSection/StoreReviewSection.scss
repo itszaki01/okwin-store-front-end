@@ -1,0 +1,13 @@
+.store-review-avatar{
+    position: relative;
+    &::after{
+        content: ""; /* Required property; specify content or leave empty */
+        display: block; /* You can use inline, block, or inline-block depending on needs */
+        width: 100px; /* Set desired width */
+        height: 100px; /* Set desired height */
+        background-color: blue; /* Background color for the pseudo-element */
+        position: absolute; /* Use positioning to control placement */
+        top: 0; /* Adjust top position */
+        left: 2; /* Adjust left position */    
+    }
+}

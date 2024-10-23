@@ -1,0 +1,5 @@
+/dist
+dockerfile
+/node_modules
+*.yml
+.env
