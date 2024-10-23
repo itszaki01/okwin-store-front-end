@@ -1,4 +1,4 @@
 services:
-  node_app:
+  next_app:
     volumes:
       - ./.env:/app/.env
