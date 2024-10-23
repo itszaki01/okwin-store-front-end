@@ -5,8 +5,6 @@ services:
       target: production
     env_file:
       - ./.env
-    environment:
-      - NODE_ENV=PROD
 
   nginx:
     image: nginx:stable-alpine
