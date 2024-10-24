@@ -15,6 +15,21 @@ import "./Thankyou.scss";
 import "./main.scss";
 import Home from ".";
 
+// export async function getServerSideProps({ req }) {
+//     // Extract the domain from the request headers
+//     const host = req.headers.host; // This will give you something like 'store.example.com'
+  
+//     // Fetch store details based on the domain (host)
+//     const store = await fetch(`https://api.example.com/store?domain=${host}`);
+//     const storeData = await store.json();
+  
+//     return {
+//       props: {
+//         storeData, // Pass store data to the page
+//       },
+//     };
+//   }
+
 export default  function App() {
     return (
         <MantineProvider theme={theme}>
