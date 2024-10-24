@@ -9,10 +9,10 @@ const apiServiceWithTags = apiService.enhanceEndpoints({
 export const categoriesApiService = apiServiceWithTags.injectEndpoints({
     endpoints: (builder) => ({
         getAllCategories: builder.query<ICateogriesRES, void>({
-            query: () => ({ url: `/store-category-public?sort=categoryIdx` }),
+            query: () => ({ url: `/store-category-public?sort=categoryIdx?domain=${location.hostname}` }),
         }),
         getCategoryBySlug: builder.mutation<IOneCategoryRES, string>({
-            query: (categorySlug) => ({ url: `/store-category-public/${categorySlug}` }),
+            query: (categorySlug) => ({ url: `/store-category-public/${categorySlug}?domain=${location.hostname}` }),
         }),
     }),
 });

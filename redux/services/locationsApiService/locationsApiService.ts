@@ -11,7 +11,7 @@ export const locationsApiService = apiServiceWithTags.injectEndpoints({
         getAllLocations: builder.query<ILocationsRES, { allowLocations: boolean }>({
             query: ({ allowLocations }) => {
                 if (allowLocations) {
-                    return { url: `/store-location-public?sort=locationIndex` };
+                    return { url: `/store-location-public?domain=${location.hostname}&sort=locationIndex` };
                 } else {
                     throw new Error("الرجاء تفعيل المناطق ");
                 }
@@ -20,7 +20,7 @@ export const locationsApiService = apiServiceWithTags.injectEndpoints({
         getAllLocationStopDesks: builder.query<ILocationStopDesksRES, string | undefined>({
             query: (locationId) => {
                 if (locationId) {
-                    return { url: `/store-location-stop-desk-public/${locationId}?sort=stopDeskIndex` };
+                    return { url: `/store-location-stop-desk-public/${locationId}?domain=${location.hostname}&sort=stopDeskIndex` };
                 } else {
                     throw new Error("الرجاء إختيار منطقة");
                 }
@@ -29,7 +29,7 @@ export const locationsApiService = apiServiceWithTags.injectEndpoints({
         getAllLocationSubLocations: builder.query<ILocationsSubRES, string | undefined>({
             query: (locationId) => {
                 if (locationId) {
-                    return { url: `/store-location-sub-public/${locationId}?sort=subLocationIndex` };
+                    return { url: `/store-location-sub-public/${locationId}?domain=${location.hostname}&sort=subLocationIndex` };
                 } else {
                     throw new Error("الرجاء إختيار منطقة");
                 }

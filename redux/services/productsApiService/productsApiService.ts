@@ -10,7 +10,7 @@ export const productsApiService = apiServiceWithTags.injectEndpoints({
     endpoints: (builder) => ({
         getAllProducts: builder.query<IProductsRES, ISearchQuery>({
             query: ({ page, limit, keyword, searchKey, searchMethod }) => {
-                let queryString = `?page=${page}&limit=${limit}`;
+                let queryString = `?domain=${location.hostname}&page=${page}&limit=${limit}`;
                 if (keyword) {
                     queryString += `&keyword=${keyword}`;
                 }

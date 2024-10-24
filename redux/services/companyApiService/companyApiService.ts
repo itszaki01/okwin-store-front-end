@@ -7,7 +7,7 @@ const apiServiceWithTags = apiService.enhanceEndpoints({
 export const companyApiService = apiServiceWithTags.injectEndpoints({
     endpoints: (builder) => ({
         getCompanyData: builder.query<ICompanyRES, void>({
-            query: () => ({ url: `/company-public` }),
+            query: () => ({ url: `/company-public?domain=dns-safir.click` }),
         }),
     }),
 });

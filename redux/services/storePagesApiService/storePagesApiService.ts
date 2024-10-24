@@ -8,7 +8,7 @@ const apiServiceWithTags = apiService.enhanceEndpoints({
 export const storePagesApiService = apiServiceWithTags.injectEndpoints({
     endpoints: (builder) => ({
         getAllStorePages: builder.query<IStorePagesRES, void>({
-            query: () => ({ url: `/store-page-public?sort=pageIndex` }),
+            query: () => ({ url: `/store-page-public?domain=${location.hostname}&sort=pageIndex` }),
         }),
         getOneStorePageBySlug: builder.mutation<IOneStorePageRES, string>({
             query: (pageSlug) => ({ url: `/store-page-public/${pageSlug}` }),

@@ -8,10 +8,10 @@ const apiServiceWithTags = apiService.enhanceEndpoints({
 export const storeSettingsApiService = apiServiceWithTags.injectEndpoints({
     endpoints: (builder) => ({
         getStoreSettings: builder.query<IOneStoreSettingsRES, void>({
-            query: () => ({ url: `/store-public` }),
+            query: () => ({ url: `/store-public?domain=${location.hostname}` }),
         }),
         sendStorePageView: builder.mutation<void, string>({
-            query: (source) => ({ url: `/store-dashboard-public/store-page-view?source="${source}"`,method:'POST' }),
+            query: (source) => ({ url: `/store-dashboard-public/store-page-view?domain=${location.hostname}&source="${source}"`,method:'POST' }),
         }),
     }),
 });
