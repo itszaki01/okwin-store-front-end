@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const baseUrl =  "http://localhost:8000/v1" 
+export const baseUrl =  "https://api.dns-safir.click/v1" 
 
 const baseQuery = fetchBaseQuery({
     baseUrl,
